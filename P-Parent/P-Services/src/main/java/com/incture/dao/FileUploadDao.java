@@ -18,7 +18,6 @@ import com.incture.util.ServicesUtil;
 @Transactional
 public class FileUploadDao extends BaseDao<FileUploadDo, FileUploadDto>{
 
-	// private static final Logger logger = LoggerFactory.getLogger("FileUploadDao");
 	@Override
 	protected FileUploadDo importDto(FileUploadDto fromDto) throws InvalidInputFault, ExecutionFault, NoResultFault {
 		FileUploadDo entity=new FileUploadDo();
@@ -74,7 +73,6 @@ public class FileUploadDao extends BaseDao<FileUploadDo, FileUploadDto>{
 			responseMessage.setMessage("success");
 			responseMessage.setStatus("true");
 			responseMessage.setStatusCode("1");
-			//logger.info("[web]succesfully saved");
            
 		} catch (ExecutionFault e) {
 			e.printStackTrace();
